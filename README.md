@@ -1,52 +1,113 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Personal WebSite</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  </head>
-  <body>
+body{
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #bfecf7;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+h1, h2, h3, h4, h5, h6, p {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
 
-<div class="box">
-  <div class="box-img">
-  <img src="profile.jpg" alt="">
-</div>
-  <h1>
-John Benedict S. Santos</h1>
-<p><strong>
-Athlete - Student - Member</strong></p>
-<p>
-Hello, My name is John Benedict S. Santos. I am 13 years old and I live Santor, Malolos Bulacan. I like to play basketball and ride my bike. I am a member of Group 2 of TEAMTAM, and this is my homepage plus my profile page. Let's get to know more about me! I study in Bulacan Ecumenical School, and my favorite subjects are AP, Computer and TLE. During my free time, I like to watch tikok or play codm.</p>
-
-<div>
- <h2 class="centered">My Javascript Sample!</h2>
-  <div class="centered">
-    <h3>Hide / Show Box</h3>
-    <button class="open-button" id="openButton" onclick="openBox()">Open Box</button>
-      <div class="box-popup" id="myBox">
-          <h3>I see you made me appear, Yay!</h3>
-          <button type="button" class="btn cancel" onclick="closeBox()">Close Box</button>
-      </div>
-      </div>
-
-
-
-<script>
-function openBox() {
-  document.getElementById("myBox").style.display = "block";
-  document.getElementById("openButton").style.display = "none";
+  font-style: normal;
 }
 
-function closeBox() {
-  document.getElementById("myBox").style.display = "none";
-  document.getElementById("openButton").style.display = "block";
+h1 {
+font-weight: 300;
+font-size: 3rem;
+margin-bottom: 3rem;
 }
-</script>
-</body>
-</html>
+strong {
+  font-weight: 600;
+}
+p {
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+.centered {
+  text-align: center;
+}
+.box{
+  background: #fff;
+  font-family: Montserrat, sans-serif;;
+
+  line-height: 30px;
+  font-weight: bold;
+  color: hotpink;
+  padding: 40px;
+  box-shadow:
+    inset #009688 0 0 0 5px, 
+    inset #059c8e 0 0 0 1px, 
+    inset #0cab9c 0 0 0 10px, 
+    inset #1fbdae 0 0 0 11px, 
+    inset #8ce9ff 0 0 0 16px, 
+    inset #48e4d6 0 0 0 17px, 
+    inset #e5f9f7 0 0 0 21px, 
+    inset #bfecf7 0 0 0 22px;
+}
+.box-img{
+
+  width: 200px;
+  height: 200px;
+  background-size: auto;
+}
+.box-img img {
+  width: auto;
+  height: 200px;
+  max-width: 100%;
+  border-radius: 50%;
+  border-style: inset;
+  border-width: 0;
+  border-color: hotpink;
+  transition: border-width .3s ease-in-out;
+}
+.box-img img:hover {
+  border-width: 5px;
+}
+.box-popup {
+  display: none;
+  background: #bfecf7;
+  padding: 1rem;
+}
+.columns {
+  display: inline-block;
+  width: 33%;
+}
+button {
+  text-decoration: none;
+  display: inline-block;
+  color: #009688;
+  font-size: 2rem;
+  font-weight: 300;
+  border-color: #009688;
+  padding: 1rem;
+  border-radius: 50px;
+  box-shadow: inset 0 0 0 0 #009688;
+  transition: 
+    color .3s ease-in-out, 
+    box-shadow .3s ease-in-out, 
+    transform .2s ease-in-out;
+
+  &:hover {
+    color: #fff;
+    box-shadow: inset 300px 0 0 0 #009688;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: 3px solid #009688;
+    outline-offset: 4px;
+  }
+
+  &:active {
+    transform: scale(1.05);
+  }
+}
 
 
